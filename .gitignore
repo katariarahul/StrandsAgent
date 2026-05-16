@@ -11,4 +11,5 @@ wheels/
 
 # Random
 Notes
-.bedrc.bedrock_agentcore.yaml
+.bedrock_agentcore_old.yaml
+.bedrock_agentcore.yaml
