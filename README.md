@@ -6,7 +6,15 @@ The agent supports:
 - custom tools
 - cloud deployment experimentation
 
-The goal of the project was to better understand practical agent deployment and execution workflows using managed infrastructure.
+## Why I Built This
+
+I wanted to better understand how AI agents can be deployed and operated beyond local development environments.
+
+This project was created as a hands-on experiment using Strands Agents and AWS AgentCore to explore:
+- agent runtime execution
+- tool orchestration
+- deployment workflows
+- managed agent hosting
 
 ## Stack
 
