@@ -1,4 +1,4 @@
-```This project demonstrates a simple AI agent built using Strands Agents and deployed on AWS AgentCore.
+This project demonstrates a simple AI agent built using Strands Agents and deployed on AWS AgentCore.
 
 The agent supports:
 - tool calling
@@ -7,7 +7,7 @@ The agent supports:
 - cloud deployment experimentation
 
 The goal of the project was to better understand practical agent deployment and execution workflows using managed infrastructure.
-```
+
 ## Stack
 
 - Strands Agents
