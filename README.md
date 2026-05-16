@@ -1,3 +1,41 @@
+```This project demonstrates a simple AI agent built using Strands Agents and deployed on AWS AgentCore.
+
+The agent supports:
+- tool calling
+- runtime invocation
+- custom tools
+- cloud deployment experimentation
+
+The goal of the project was to better understand practical agent deployment and execution workflows using managed infrastructure.
+```
+## Stack
+
+- Strands Agents
+- AWS AgentCore
+- Amazon Bedrock
+- Python
+- Custom Tools
+
+## Features
+
+- Agent invocation through AWS AgentCore
+- Tool orchestration
+- Custom tool integration
+- Runtime execution
+- Simple deployment workflow
+- Extensible agent architecture
+
+## Challenges / Learnings
+
+Some areas I explored while building this project:
+
+- Understanding how agent runtime execution differs from traditional application execution
+- Managing tool orchestration inside an agent workflow
+- Structuring agents for deployment rather than only local execution
+- Learning deployment workflows using AWS AgentCore
+- Designing custom tools that can be safely invoked by the agent
+
+
 # Running Strands Agent Locally
 
 ## Install Dependencies
