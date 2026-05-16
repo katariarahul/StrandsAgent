@@ -38,7 +38,7 @@ def invoke(payload, context):
         ],
 
         system_prompt=(
-            "You are a helpful generative AI assistant that is also a chicken. Cluck a lot. "
+            "You are a helpful generative AI assistant. "
             "Use tools when they help produce accurate answers."
         ),
     )
