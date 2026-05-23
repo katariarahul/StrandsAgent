@@ -43,6 +43,41 @@ Some areas I explored while building this project:
 - Learning deployment workflows using AWS AgentCore
 - Designing custom tools that can be safely invoked by the agent
 
+# Project Structure
+
+```text
+.
+├── main.py                 # Local agent runtime
+├── agentcore.py            # AWS AgentCore entrypoint
+├── tools/                  # Custom tools
+├── requirements.txt
+├── Dockerfile
+├── pyproject.toml
+├── uv.lock
+└── README.md
+```
+
+# Virtual Environment Notes
+
+This project uses a local `.venv`.
+
+Activate it before running AgentCore commands:
+
+```bash
+source .venv/Scripts/activate
+```
+
+Verify the correct interpreter:
+
+```bash
+which python
+```
+
+Expected:
+
+```text
+/c/<project>/StrandsAgent/.venv/Scripts/python
+```
 
 # Running Strands Agent Locally
 
@@ -207,6 +242,8 @@ pip install bedrock-agentcore-starter-toolkit==0.1.10
 
 ```bash
 agentcore configure -e agentcore.py -r ap-south-1
+
+The `agentcore` command is available inside the project's virtual environment after installing the AgentCore toolkit. Inside the 'Basic' Folder
 ```
 
 Configures the deployment environment and runtime entrypoint.
@@ -470,3 +507,15 @@ Python 3.11 or 3.12 is recommended for better compatibility with:
 - boto3
 - OpenTelemetry libraries
 ```
+
+# Example Request
+
+```json
+{
+  "prompt": "What is the current time in Tokyo?"
+}
+```
+
+# License
+
+MIT License

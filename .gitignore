@@ -13,3 +13,5 @@ wheels/
 Notes
 .bedrock_agentcore_old.yaml
 .bedrock_agentcore.yaml
+
+.env
