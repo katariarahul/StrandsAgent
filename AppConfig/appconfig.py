@@ -12,9 +12,9 @@ load_dotenv()
 # AppConfig Details
 # ---------------------------------------------------
 
-APPLICATION_ID = "n5rkoho"#os.getenv("APPCONFIG_APPLICATION_ID")
-ENVIRONMENT_ID = "b5gjsoc"#os.getenv("APPCONFIG_ENVIRONMENT_ID")
-CONFIG_PROFILE_ID = "mrewlyd"#os.getenv("APPCONFIG_CONFIGURATION_PROFILE_ID")
+APPLICATION_ID = os.getenv("APPCONFIG_APPLICATION_ID")
+ENVIRONMENT_ID = os.getenv("APPCONFIG_ENVIRONMENT_ID")
+CONFIG_PROFILE_ID = os.getenv("APPCONFIG_CONFIGURATION_PROFILE_ID")
 # ---------------------------------------------------
 # AppConfig Client
 # ---------------------------------------------------
@@ -30,7 +30,7 @@ appconfig = boto3.client(
 
 config_cache = None
 last_refresh = 0
-CACHE_TTL = 60 #os.getenv("CACHE_TTL")  # seconds
+CACHE_TTL = os.getenv("CACHE_TTL")  # seconds
 config_token = None
 
 def initialize_appconfig():
