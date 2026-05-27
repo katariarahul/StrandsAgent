@@ -54,7 +54,7 @@ You must create:
   }
 }
 
-2. IAM Permissions (Critical)
+### 2. IAM Permissions (Critical)
 
 The AgentCore execution role must include permissions for:
 
@@ -63,6 +63,7 @@ Amazon Bedrock model invocation
 CloudWatch Logs
 Minimum IAM Policy Example
 
+```json
 {
   "Effect": "Allow",
   "Action": [
@@ -76,10 +77,10 @@ Minimum IAM Policy Example
   "Resource": "*"
 }
 
-⚠️ Note:
+### Note:
 For production, replace "Resource": "*" with scoped ARNs for tighter security.
 
-🚀 Deployment Flow
+### 3. Deployment Flow
 agentcore configure
 agentcore launch
 ## 🧠 Configuration Caching & Versioning
