@@ -1,0 +1,7 @@
+boto3>=1.39.7
+botocore>=1.39.7
+strands-agents==1.18.0
+strands-agents-tools>=0.5.1
+opentelemetry-api
+opentelemetry-sdk
+bedrock-agentcore-starter-toolkit==0.1.10

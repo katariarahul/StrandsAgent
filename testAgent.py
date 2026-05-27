@@ -14,7 +14,7 @@ client = boto3.client("bedrock-agentcore", region_name="ap-south-1")
 # 2. Define target metadata
 # Replace with your target runtime ARN or Agent ID
 agent_arn_value: str = os.getenv("AGENT_ARN")
-print("....",agent_arn_value)
+#print("....",agent_arn_value)
 
 try:
     response = client.invoke_agent_runtime(
@@ -24,7 +24,7 @@ try:
             "prompt": "What time is it?"
         })
     )
-    print(response)
+    #print(response)
 except Exception as e: 
     print(e)
 
@@ -45,10 +45,9 @@ response = client.invoke_agent_runtime(
     qualifier="DEFAULT" # Points to a specific version or endpoint
 )
 
-# Consume and print the streamed chunks
-content_chunks = []
-for chunk in response.get("response", []):
-    content_chunks.append(chunk.decode('utf-8'))
-
-final_response = json.loads(''.join(content_chunks))
-print("Agent Output:", final_response)
+streaming_body = response.get("response")
+if streaming_body:
+    # Read and decode the full body payload block 
+    raw_payload_str = streaming_body.read().decode('utf-8')
+    
+    print(raw_payload_str)
