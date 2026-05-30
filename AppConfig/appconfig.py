@@ -13,6 +13,7 @@ load_dotenv()
 # ---------------------------------------------------
 
 APPLICATION_ID = os.getenv("APPCONFIG_APPLICATION_ID")
+logger.info(f"***************Application ID ********** = {APPLICATION_ID}")
 ENVIRONMENT_ID = os.getenv("APPCONFIG_ENVIRONMENT_ID")
 CONFIG_PROFILE_ID = os.getenv("APPCONFIG_CONFIGURATION_PROFILE_ID")
 # ---------------------------------------------------
@@ -30,7 +31,7 @@ appconfig = boto3.client(
 
 config_cache = None
 last_refresh = 0
-CACHE_TTL = os.getenv("CACHE_TTL")  # seconds
+CACHE_TTL = float(os.getenv("CACHE_TTL", "60"))
 config_token = None
 
 def initialize_appconfig():
